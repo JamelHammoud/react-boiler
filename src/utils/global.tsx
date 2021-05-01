@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyles = createGlobalStyle`
+export const Global = createGlobalStyle`
 
   html {
     -ms-text-size-adjust: 100%;
