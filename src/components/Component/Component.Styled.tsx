@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledComponent = styled.div`
-  color: red;
+  color: ${({ theme }) => theme.gray050};
 `
 
 export default StyledComponent
