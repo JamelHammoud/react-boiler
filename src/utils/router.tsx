@@ -1,6 +1,5 @@
 const App = {
-  home: '/',
-  routerTest: '/router',
+  home: '/'
 }
 
 const ROUTES = {

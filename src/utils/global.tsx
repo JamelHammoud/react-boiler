@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const Global = createGlobalStyle`
-
   html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -9,11 +8,11 @@ export const Global = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.background};
-    color: ${({ theme }) => theme.foreground};
+    background-color: ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.color.foreground};
     font-size: 1rem;
     margin: 0;
-    font-family: ${({ theme }) => theme.fontFamily1};
+    font-family: ${({ theme }) => theme.type.sansSerif};
     overscroll-behavior-y: none;
     overflow-x: hidden;
   }
@@ -29,7 +28,7 @@ export const Global = createGlobalStyle`
   input, button, select, textarea {
     -webkit-appearance: none;
     outline: none;
-    font-family: ${({ theme }) => theme.fontFamily1};
+    font-family: ${({ theme }) => theme.type.sansSerif};
     margin: 0;
     padding: 0;
     font-size: 1rem;
@@ -37,7 +36,7 @@ export const Global = createGlobalStyle`
   }
 
   input::placeholder {
-    color: ${({ theme }) => theme.gray500};
+    color: ${({ theme }) => theme.color.gray[500]};
   }
 
   input::-webkit-outer-spin-button,
@@ -60,30 +59,18 @@ export const Global = createGlobalStyle`
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
     -webkit-text-fill-color: inherit;
-    -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.amber050} inset;
-    box-shadow: 0 0 0px 1000px ${({ theme }) => theme.amber050} inset;
+    -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.color.amber[50]} inset;
+    box-shadow: 0 0 0px 1000px ${({ theme }) => theme.color.amber[50]} inset;
     transition: background-color 5000s ease-in-out 0s;
   }
 
   input:-webkit-autofill::first-line {
-    font-family: ${({ theme }) => theme.fontFamily1};
+    font-family: ${({ theme }) => theme.type.sansSerif};
     font-size: 1rem !important;
-    color: ${({ theme }) => theme.gray700};
+    color: ${({ theme }) => theme.color.gray[700]};
   }
 
-  button:hover {
+  button:hover, a:hover {
     cursor: pointer;
   }
-
-  .width-controller {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  .no-deco {
-    text-decoration: none;
-    color: inherit;
-  }
-
 `

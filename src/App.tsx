@@ -1,20 +1,23 @@
+import ROUTES from './utils/router'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
-import { theme } from './utils/theme'
 import { Global } from './utils/global'
-import ROUTES from './utils/router'
+import { theme } from './utils/theme'
 
-import { Component } from './components/Component'
+import { ExampleView } from './views/ExampleView'
 
-export default function App() {
+const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Global />
+      <Global/>
       <Router>
+        {/* Routes here */}
         <Switch>
-          <Route path={ROUTES.App.home} component={Component} />
+          <Route path={ROUTES.App.home} component={ExampleView} exact/>
         </Switch>
       </Router>
     </ThemeProvider>
   )
 }
+
+export default App
