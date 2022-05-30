@@ -7,7 +7,7 @@ const initialState: InitialState = {
 }
 
 export const templateSlice = createSlice({
-  name: '',
+  name: 'template',
   initialState,
   reducers: {
     setState: (state, action: PayloadAction<any>) => {
