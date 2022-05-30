@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import '../fonts/index.css'
 
 export const Global = createGlobalStyle`
   html {
@@ -12,7 +13,7 @@ export const Global = createGlobalStyle`
     color: ${({ theme }) => theme.color.foreground};
     font-size: 1rem;
     margin: 0;
-    font-family: ${({ theme }) => theme.type.sansSerif};
+    font-family: ${({ theme }) => theme.type.sans};
     overscroll-behavior-y: none;
     overflow-x: hidden;
   }
@@ -28,7 +29,7 @@ export const Global = createGlobalStyle`
   input, button, select, textarea {
     -webkit-appearance: none;
     outline: none;
-    font-family: ${({ theme }) => theme.type.sansSerif};
+    font-family: ${({ theme }) => theme.type.sans};
     margin: 0;
     padding: 0;
     font-size: 1rem;
@@ -65,7 +66,7 @@ export const Global = createGlobalStyle`
   }
 
   input:-webkit-autofill::first-line {
-    font-family: ${({ theme }) => theme.type.sansSerif};
+    font-family: ${({ theme }) => theme.type.sans};
     font-size: 1rem !important;
     color: ${({ theme }) => theme.color.gray[700]};
   }

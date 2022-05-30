@@ -1,12 +1,16 @@
 import express from 'express'
+import dotenv from 'dotenv'
+import cors from 'cors'
+
+dotenv.config()
 
 const app = express()
-const port = 2053
+const bodyParser = express.json()
+const PORT = 2053
 
-app.get('/', (req, res) => {
-  res.send('Hi there!')
-})
+app.use(cors({ origin: '*' }))
+app.use(bodyParser)
 
-app.listen(port, () => {
-  return console.log(`server is listening on ${port}`)
+app.listen(PORT, () => {
+  return console.log(`Server is listening on ${PORT}`)
 })
