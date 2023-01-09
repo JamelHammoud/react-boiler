@@ -1,5 +1,5 @@
 # react-boiler
-React template using styled functional components.
+React template using functional styled components.
 
 Use `yarn start` to start the development server.
 
@@ -10,8 +10,8 @@ Use `yarn start` to start the development server.
 * All views live within the `views` folder
   * A view typically denotes a page (ex: sign up, register, feed)
 * All types live within the `types` folder
-* Each component is within a folder with the same name as the component (use CamelCase!)
+* Each component is within a folder with the same name as the component (use PascalCase!)
 * Each component folder contains at least three files:
-  * index.tsx (used to export the component/styled component)
+  * index.ts (used to export the component/styled component)
   * ComponentName.tsx (used for the actual component)
   * ComponentName.Styled.tsx (used for the styled component)

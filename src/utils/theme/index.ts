@@ -1,4 +1,4 @@
-import { type } from './type'
+import { typeface } from './typeface'
 import { elevation } from './elevation'
 import { breakpoint } from './breakpoint'
 import { color } from './color'
@@ -7,7 +7,7 @@ export const theme = {
   color,
   elevation,
   breakpoint,
-  type
+  typeface
 }
 
 export type Theme = typeof theme

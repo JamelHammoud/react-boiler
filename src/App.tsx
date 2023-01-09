@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
-import { Global, persistor, ROUTES, store, theme } from './utils'
+import { Global, ROUTES, theme } from './utils'
+import { persistor, store } from './redux'
 
 import { ExampleView } from './views'
 
